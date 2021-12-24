@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_10sdp"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create an account"
+            android:textSize="@dimen/_24ssp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="@dimen/_20sdp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Halabooker! Let's book you nearest salon service."
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/black"
+            android:layout_gravity="center|start"
+            />
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:paddingStart="@dimen/_5sdp"
+            />
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:hint="Email Address"
+
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/et_bg"
+            android:paddingStart="@dimen/_5sdp"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingStart="@dimen/_5sdp"
+            />
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:hint="Enter Password"
+            android:paddingStart="@dimen/_5sdp"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/et_bg"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingStart="@dimen/_5sdp"
+            />
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:hint="Enter Confirm Password"
+            android:paddingStart="@dimen/_5sdp"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/et_bg"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign-in with Apple  "
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/ic_apple"
+            android:drawablePadding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign-in with Google"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/ic_apple"
+            android:drawablePadding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            />
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:text="Create an account"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_20sdp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/txt_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login to my account"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/secondry_color"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"/>
+
+
+    </LinearLayout>
+</ScrollView>

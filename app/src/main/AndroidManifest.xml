@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Halabook">
         <activity
+            android:name=".activities.MyCartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LocationServiceActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.SpecialistActivity"
             android:exported="false" />
         <activity

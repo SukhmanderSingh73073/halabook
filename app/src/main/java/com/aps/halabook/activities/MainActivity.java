@@ -1,5 +1,6 @@
 package com.aps.halabook.activities;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         initViews() ;
         setFragmentAdapter() ;
         manageClickListener() ;
+        showLocationDialog();
 
     }
 
@@ -60,5 +62,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    void showLocationDialog(){
+
+        Dialog dialog = new Dialog(MainActivity.this ) ;
+        dialog.setContentView(R.layout.location_dialog) ;
+        dialog.show() ;
+
+        dialog.findViewById(R.id.btn_no).setOnClickListener(v->{
+            dialog.dismiss() ;
+        });
+
+        dialog.findViewById(R.id.btn_yes).setOnClickListener(v->{
+            dialog.dismiss() ;
+        });
+
+    }
 
 }

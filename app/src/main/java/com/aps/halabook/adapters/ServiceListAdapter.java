@@ -31,7 +31,7 @@ public class ServiceListAdapter extends RecyclerView.Adapter<ServiceListAdapter.
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
 
-        holder.rv_ser.setAdapter(new ServiceAdapter(commonInterface)) ;
+        holder.rv_ser.setAdapter(new ServiceAdapter("VERTICAL" , commonInterface)) ;
     }
 
     @Override

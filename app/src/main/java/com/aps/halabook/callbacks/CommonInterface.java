@@ -1,5 +1,5 @@
 package com.aps.halabook.callbacks;
 
 public interface CommonInterface {
-    void onItemClicked(int position) ;
+    void onItemClicked(String type , int position) ;
 }

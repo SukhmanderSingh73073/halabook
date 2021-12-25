@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.aps.halabook.R;
+import com.aps.halabook.activities.LocationServiceActivity;
 import com.aps.halabook.activities.ServiceDetailActivity;
 import com.aps.halabook.adapters.CategoryAdapter;
 import com.aps.halabook.adapters.ServiceListAdapter;
@@ -78,8 +79,13 @@ public class HomeFragment extends Fragment {
 
     private void setServiceAdapter() {
 
-        rv_ser.setAdapter(new ServiceListAdapter(getContext() , pos->{
-            startActivity(new Intent(getContext() , ServiceDetailActivity.class)) ;
+        rv_ser.setAdapter(new ServiceListAdapter(getContext() , (type , pos)->{
+            if (type.equalsIgnoreCase("root")){
+                startActivity(new Intent(getContext() , ServiceDetailActivity.class)) ;
+            }else {
+                startActivity(new Intent(getContext() , LocationServiceActivity.class)) ;
+            }
+
         })) ;
 
     }

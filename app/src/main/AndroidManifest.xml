@@ -12,6 +12,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Halabook">
         <activity
+            android:name=".activities.DirectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.BookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ConfirmOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ServiceListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CategoryListActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.MyCartActivity"
             android:exported="false" />
         <activity

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.aps.halabook.R;
@@ -19,6 +20,9 @@ public class MyCartActivity extends AppCompatActivity {
 
         initViews() ;
         setCartAdapter() ;
+        findViewById(R.id.btn_confirm).setOnClickListener(v->{
+            startActivity(new Intent(getApplicationContext() , ConfirmOrderActivity.class)) ;
+        });
 
 
     }

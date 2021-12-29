@@ -8,33 +8,23 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aps.halabook.R;
-import com.aps.halabook.callbacks.CommonInterface;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Holder> {
-    CommonInterface commonInterface ;
-
-    public CategoryAdapter(CommonInterface commonInterface) {
-        this.commonInterface = commonInterface;
-    }
-
+public class NotificationAapter extends RecyclerView.Adapter<NotificationAapter.Holder> {
     @NonNull
     @Override
     public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new Holder(LayoutInflater.from(parent.getContext())
-        .inflate(R.layout.category_adapter_item , parent , false)) ;
+        .inflate(R.layout.notification_adapter_item , parent , false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
 
-        holder.itemView.setOnClickListener(v->{
-            commonInterface.onItemClicked("",position) ;
-        });
     }
 
     @Override
     public int getItemCount() {
-        return 100;
+        return 10;
     }
 
     class Holder extends RecyclerView.ViewHolder {

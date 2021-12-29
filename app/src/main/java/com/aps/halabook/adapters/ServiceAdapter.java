@@ -25,6 +25,8 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.Holder> 
         int layout = R.layout.service_adapter_horizontal ;
         if (type.equalsIgnoreCase("VERTICAL")){
             layout = R.layout.service_adapter_item ;
+        }else if (type.equalsIgnoreCase("VERTICAL_MATCH")){
+            layout = R.layout.service_adapter_match ;
         }
         return new Holder(LayoutInflater.from(parent.getContext()).inflate(layout , parent , false));
     }
@@ -36,17 +38,23 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.Holder> 
             commonInterface.onItemClicked("txt_location" , position ) ;
         });
 
+
         holder.itemView.findViewById(R.id.btn_book).setOnClickListener(v->{
             commonInterface.onItemClicked("btn_book" , position ) ;
         });
         holder.itemView.setOnClickListener(v->{
             commonInterface.onItemClicked("root" , position ) ;
         });
+
+        holder.itemView.findViewById(R.id.rating_bar).setOnClickListener(v->{
+            commonInterface.onItemClicked("rating" , position ) ;
+        });
+
     }
 
     @Override
     public int getItemCount() {
-        return 110;
+        return 10;
     }
 
     class Holder extends RecyclerView.ViewHolder {

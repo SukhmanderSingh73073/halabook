@@ -1,5 +1,6 @@
 package com.aps.halabook.fragments;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -12,10 +13,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.aps.halabook.R;
+import com.aps.halabook.activities.CategoryListActivity;
 import com.aps.halabook.activities.LocationServiceActivity;
+import com.aps.halabook.activities.MainActivity;
 import com.aps.halabook.activities.ServiceDetailActivity;
+import com.aps.halabook.activities.ServiceListActivity;
 import com.aps.halabook.adapters.CategoryAdapter;
 import com.aps.halabook.adapters.ServiceListAdapter;
+import com.aps.halabook.util.Utility;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -74,7 +79,16 @@ public class HomeFragment extends Fragment {
         initViews() ;
         setCategoryAdapter() ;
         setServiceAdapter() ;
+        manageListener() ;
         return  view ;
+    }
+
+    private void manageListener() {
+
+        view.findViewById(R.id.txt_view_cat).setOnClickListener(v->{
+            startActivity(new Intent(getContext() , CategoryListActivity.class)) ;
+        });
+
     }
 
     private void setServiceAdapter() {
@@ -82,13 +96,16 @@ public class HomeFragment extends Fragment {
         rv_ser.setAdapter(new ServiceListAdapter(getContext() , (type , pos)->{
             if (type.equalsIgnoreCase("root")){
                 startActivity(new Intent(getContext() , ServiceDetailActivity.class)) ;
-            }else {
+            }else if (type.equalsIgnoreCase("rating")){
+                Utility.ratingDialog(getActivity())  ;
+            } else {
                 startActivity(new Intent(getContext() , LocationServiceActivity.class)) ;
             }
 
         })) ;
 
     }
+
 
     private void initViews() {
 
@@ -101,7 +118,10 @@ public class HomeFragment extends Fragment {
     }
 
     void setCategoryAdapter(){
-        rv_cat.setAdapter(new CategoryAdapter()) ;
+        rv_cat.setAdapter(new CategoryAdapter((type,pos)->{
+            startActivity(new Intent(getContext() , ServiceListActivity.class)) ;
+
+        })) ;
 
 
     }
